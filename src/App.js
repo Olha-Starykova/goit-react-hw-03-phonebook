@@ -71,7 +71,7 @@ class App extends Component {
   componentDidMount() {
     const contacts = localStorage.getItem("contacts")
     const parsedContact = JSON.parse(contacts)
-//console.log(parsedContact)
+    //console.log(parsedContact)
     if (parsedContact) { this.setState({ contacts: parsedContact }) };
    
   };
@@ -80,7 +80,7 @@ class App extends Component {
     //console.log(prevState)
    // console.log(this.state)
     if (this.state.contacts !== prevState.contacts) {
-      console.log("обновилось поле пишем в локалсторадж")
+      //console.log("обновилось поле пишем в локалсторадж")
       localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
     };
   }
